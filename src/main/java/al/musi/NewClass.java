@@ -17,7 +17,7 @@ public class NewClass {
         return ret+1;
     }
 	
-    int wordcount(String s)
+    public int wordcount(String s)
     {
         char ch[]= new char[s.length()];
         int c = 0;      
@@ -33,6 +33,10 @@ public class NewClass {
         }
         return c;
     }
+    
+    public int bestCountWords(String str) {
+        return str.trim().split(" ").length;
+    }
 	
     public static void main (String[] args) throws java.lang.Exception
     {
@@ -40,20 +44,8 @@ public class NewClass {
         NewClass ideone = new NewClass();
 
         System.out.println(str + ": " + ideone.countWords(str));
-        System.out.println("str" + ": " + ideone.countWords("str"));
-        System.out.println("str " + ": " + ideone.countWords("str "));
-
-        System.out.println("");
-
         System.out.println(str + ": " + ideone.wordcount(str));
-        System.out.println("str" + ": " + ideone.wordcount("str"));
-        System.out.println("str " + ": " + ideone.wordcount("str "));
-
-        System.out.println("");
-
-        System.out.println(str.trim().split(" ").length);
-        System.out.println("str".trim().split(" ").length);
-        System.out.println("str ".trim().split(" ").length);
+        System.out.println(str + ": " + ideone.bestCountWords(str));
 
     }
     
